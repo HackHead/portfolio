@@ -1,6 +1,7 @@
 {
   "tasks": {
-    "dev": "deno run --watch --allow-all src/App.ts"
+    "dev": "deno run --watch --allow-all src/App.ts",
+    "prod" : "pm2 start ./src/App.ts --interpreter='deno' --interpreter-args='run --allow-env --allow-net --allow-read --unstable --no-prompt' --name 'deno' -- start --production"
   },
   "compilerOptions": {
     "allowJs": true,
