@@ -6,7 +6,7 @@ import { BOT_VISITOR_TEMPLATE } from "../utils/hub.ts";
 
 const metrics = async ({request}: Context, next: Next) => {
     const isProduction = true;
-    isProduction && Bot.sendMessage(BOT_VISITOR_TEMPLATE(request.ip, request.headers.get('user-agent') ?? 'undefined', request.url))
+    isProduction && Bot.sendMessage(BOT_VISITOR_TEMPLATE(request.headers.get("X-Real-IP"), request.headers.get('user-agent') ?? 'undefined', request.url))
     await next()
 }
 

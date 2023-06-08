@@ -12,7 +12,7 @@ export const BOT_EMAIL_TEMPLATE = (name: string, email: string, message: string)
     )
 }
 
-export const BOT_VISITOR_TEMPLATE = (ip: string, userAgent: string, url: URL) => {
+export const BOT_VISITOR_TEMPLATE = (ip: string | null, userAgent: string, url: URL) => {
     return (`
 🎉 New visitor alert! 🎉
     
