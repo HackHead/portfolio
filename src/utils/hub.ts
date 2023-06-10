@@ -12,11 +12,12 @@ export const BOT_EMAIL_TEMPLATE = (name: string, email: string, message: string)
     )
 }
 
-export const BOT_VISITOR_TEMPLATE = (ip: string | null, userAgent: string, url: URL) => {
+export const BOT_VISITOR_TEMPLATE = (ip: string | null, userAgent: string, url: URL, ref: string) => {
     return (`
 🎉 New visitor alert! 🎉
     
 🌐 IP Address: ${ip}
 🌎 Browser:  ${userAgent}
-🔍 Page Visited: ${url}`)
-}
+🔍 Page Visited: ${url}
+🔗 Ref: ${ref}
+`)}
